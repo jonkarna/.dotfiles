@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh configuration.
-export ZSH=$HOME/.oh-my-zsh
+export ZSH=$HOME/.dotfiles/oh-my-zsh
 
 # Set to the name theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -17,19 +17,21 @@ export ZSH_THEME="clean"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
+#plugins=(git brew)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f ~/.dotfiles/bash/aliases ]; then
+    . ~/.dotfiles/bash/aliases
 fi
 
-# JRuby 1.9
+#export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 export JRUBY_OPTS=--1.9
 
 # fixing problem with [] and . in rake task args
 alias rake='noglob rake'
+#alias pgstart='pg_ctl -D /usr/local/var/postgres -l logfile start'
 
 # putting rvm current in prompt
 PS1="
