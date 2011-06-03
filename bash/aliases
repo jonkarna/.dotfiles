@@ -1,0 +1,56 @@
+# http://maestric.com/doc/unix/setup_ubuntu704_for_java_development
+# path
+# export PATH=$PATH:~/bin
+ 
+# Environment
+# export JAVA_HOME=/usr/lib/jvm/java-1.5.0-sun
+# export CATALINA_HOME=/usr/share/tomcat5.5
+
+# utils
+alias cdd='cd ~/Desktop'
+alias l='ls -lh'
+alias lr='ls -lrth'
+alias ll='ls -lh | more'
+alias lll='ls -alh'
+alias vi='vim'
+
+# prompt
+# PS1="[\t \w]"
+# PS1="\e[0;34m[\e[0;31m\t \e[0;35m\w\e[0;34m] \e[0m"
+
+# tomcat
+alias tomcat6='sudo /etc/init.d/tomcat6'
+# alias tstart='sudo /usr/share/tomcat6/bin/catalina.sh start'
+# alias tstop='sudo /usr/share/tomcat6/bin/catalina.sh stop'
+alias trun='sudo /usr/share/tomcat6/bin/catalina.sh run'
+# alias t1='tstart'
+# alias t0='tstop'
+# alias tps='ps aux | grep tomcat'
+
+# alias cdt='cd /usr/share/tomcat5.5/webapps'
+# alias cdl='cd /usr/share/tomcat5.5/logs'
+# alias cl='cat /usr/share/tomcat5.5/logs/catalina.out'
+# alias ccl='echo > /usr/share/tomcat5.5/logs/catalina.out'
+# alias rl='ant && t0 && sleep 2 && tps && t1'
+
+# postgresql
+alias pgstart='sudo /etc/init.d/postgresql start'
+alias pgstop='sudo /etc/init.d/postgresql stop'
+alias pgst='sudo /etc/init.d/postgresql status'
+alias createpg='createdb -U postgres -h localhost -T template_pgrouting'
+ 
+# svn
+# alias stm='svn status | grep "M "'
+# alias st='svn status'
+# alias di='svn diff'
+ 
+# apps
+# alias thunderbird='mozilla-thunderbird'
+# alias nedit='XLIB_SKIP_ARGB_VISUALS=1 nedit'
+ 
+# database
+# alias db='psql test01'
+# alias dbbackup='pg_dump test01 | bzip2 >  ~/archive/backup/db/test01_`date +%Y-%m-%d_%HH%M`.dump.bz2'
+
+# ruby
+alias b='bundle exec'
