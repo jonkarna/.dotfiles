@@ -1,5 +1,5 @@
 " Font
-set guifont=Monaco:h14
+set guifont=Courier\ New:h18
 
 let os = substitute(system('uname'), "\n", "", "")
 if os == "Linux"
