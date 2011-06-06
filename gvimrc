@@ -5,7 +5,11 @@ set guioptions-=T
 color delek
 
 " Font
-set guifont=Courier\ New:h18
+if has("gui_gtk2")
+  set guifont=Monospace\ 16
+else
+  set guifont=Courier\ New:h18
+end
 
 " Don't beep
 set visualbell
