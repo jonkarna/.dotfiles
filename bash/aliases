@@ -54,3 +54,5 @@ alias createpg='createdb -U postgres -h localhost -T template_pgrouting'
 
 # ruby
 alias b='bundle exec'
+
+alias reload='source ~/.zshrc'
