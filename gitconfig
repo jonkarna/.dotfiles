@@ -1,0 +1,27 @@
+[user]
+	name = Jon Karna
+	email = ipg49vv2@gmail.com
+[alias]
+  co = checkout
+  ci = checkin
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  log1 = log --pretty=oneline --abbrev-commit
+  diffi = diff --ignore-all-space
+  unstage = reset HEAD --
+  last = log -1 HEAD
+  type = cat-file -t
+  dump = cat-file -p
+[core]
+	editor = vim
+[merge]
+	tool = meld
+[color]
+	ui = true
+[giggle]
+	main-window-maximized = true
+	main-window-geometry = 0x0+0+0
+	history-view-vpane-position = 383
+	main-window-view = HistoryView
+	file-view-vpane-position = 434
