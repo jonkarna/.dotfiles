@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+current_directory = Dir.pwd
+Dir.chdir "#{ENV['HOME']}/.dotfiles"
+system 'git pull origin master'
+system 'git submodule init'
+system 'git submodule update'
+system 'rake install'
+Dir.chdir current_directory
