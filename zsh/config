@@ -1,0 +1,23 @@
+export ZSH=$HOME/.dotfiles/oh-my-zsh
+export ZSH_THEME="clean"
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
+
+# fixing problem with [] and . in rake task args
+alias rake='noglob rake'
+
+# putting rvm current in prompt
+PS1="
+%{$fg[red]%}\$(~/.rvm/bin/rvm current)%{$reset_color%}
+$PS1"
+
+unsetopt auto_name_dirs
+
+# path
+export PATH="$HOME/bin:$HOME/.dotfiles/bin:$PATH"
+
+# jruby conf
+export JRUBY_OPTS=--1.9
+
+# load rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
