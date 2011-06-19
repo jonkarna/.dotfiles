@@ -14,4 +14,10 @@ Create links to dotfiles
 
 ## Extra
 
-If there are system specific vim settings, place it into a ~/.gvimrc.local or ~/.vimrc.local file. This will be loaded automatically if it exists.
+If there are system specific settings, place them into
+
+* ~/.zshrc.local
+* ~/.gvimrc.local
+* ~/.vimrc.local
+
+These will be loaded automatically if it exists.
