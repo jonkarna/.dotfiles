@@ -8,6 +8,7 @@ filetype plugin indent on
 set backspace=indent,eol,start
 set nobackup
 set nowritebackup
+set noswapfile
 set history=50
 set number
 set ruler
