@@ -8,8 +8,8 @@ alias rake='noglob rake'
 
 # putting rvm current in prompt
 PS1="
-%{$fg[red]%}\$(~/.rvm/bin/rvm current)%{$reset_color%}
-$PS1"
+%{$fg_bold[red]%}\$(~/.rvm/bin/rvm current)
+%{$fg_bold[blue]%}%3~ %{$reset_color%}$(git_prompt_info)%(!.#.$) "
 
 unsetopt auto_name_dirs
 
