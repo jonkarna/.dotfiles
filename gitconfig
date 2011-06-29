@@ -4,24 +4,24 @@
 [alias]
   co = checkout
   ci = checkin
-  st = status
+  st = status -sb
   br = branch
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-  log1 = log --pretty=oneline --abbrev-commit
-  diffi = diff --ignore-all-space
-  unstage = reset HEAD --
-  last = log -1 HEAD
-  type = cat-file -t
-  dump = cat-file -p
+  up = pull
 [core]
 	editor = vim
-[merge]
-	tool = meld
 [color]
 	ui = true
-[giggle]
-	main-window-maximized = true
-	main-window-geometry = 0x0+0+0
-	history-view-vpane-position = 383
-	main-window-view = HistoryView
-	file-view-vpane-position = 434
+[github]
+  user = jonkarna
+[url "git@github.com:"]
+  pushInsteadOf = github:
+  pushInsteadOf = git://github.com/
+[url "git://github.com/"]
+  insteadOf = github:
+[url "git@gist.github.com:"]
+  pushInsteadOf = gist:
+  pushInsteadOf = git://gist.github.com/
+[url "git://gist.github.com/"]
+  insteadOf = gist:
+[url "git@heroku.com:"]
+  insteadOf = heroku:
