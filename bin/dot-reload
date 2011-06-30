@@ -6,3 +6,4 @@ system 'git submodule init'
 system 'git submodule update'
 system 'rake install'
 Dir.chdir current_directory
+system 'reload'
