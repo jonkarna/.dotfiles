@@ -4,7 +4,7 @@ else
   export PS1='%3~$(git_info_for_prompt)%# '
 fi
 
-export PATH="$HOME/bin:$HOME/.dotfiles/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.dotfiles/bin:$HOME/.dotfiles/git-extras/bin:$PATH"
 export JRUBY_OPTS=--1.9
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
 export CLICOLOR=true
