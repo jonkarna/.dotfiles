@@ -1,0 +1,27 @@
+[user]
+	name = Jon Karna
+	email = ipg49vv2@gmail.com
+[alias]
+  co = checkout
+  ci = checkin
+  st = status -sb
+  br = branch
+  up = pull
+[core]
+	editor = vim
+[color]
+	ui = true
+[github]
+  user = jonkarna
+[url "git@github.com:"]
+  pushInsteadOf = github:
+  pushInsteadOf = git://github.com/
+[url "git://github.com/"]
+  insteadOf = github:
+[url "git@gist.github.com:"]
+  pushInsteadOf = gist:
+  pushInsteadOf = git://gist.github.com/
+[url "git://gist.github.com/"]
+  insteadOf = gist:
+[url "git@heroku.com:"]
+  insteadOf = heroku:
