@@ -7,3 +7,6 @@
 [submodule "git-extras"]
 	path = git-extras
 	url = https://github.com/visionmedia/git-extras.git
+[submodule "vim.symlink/bundle/endwise"]
+	path = vim.symlink/bundle/endwise
+	url = https://github.com/tpope/vim-endwise.git
