@@ -1,9 +1,24 @@
 #!/usr/bin/env ruby
+dotfiles_directory = "#{ENV['HOME']}/.dotfiles"
 current_directory = Dir.pwd
-Dir.chdir "#{ENV['HOME']}/.dotfiles"
+
+puts "navigating to #{dotfiles_directory}"
+Dir.chdir dotfiles_directory
+
+puts
+puts "updating dotfiles"
 system 'git pull origin master'
 system 'git submodule init'
 system 'git submodule update'
+
+puts
+puts "installing dotfiles"
 system 'rake install'
+
+puts
+puts 'sourcing ~/.zshrc'
+system 'zsh ~/.zshrc'
+
+puts
+puts "navigating back to #{current_directory}"
 Dir.chdir current_directory
-system 'source ~/.zshrc'
