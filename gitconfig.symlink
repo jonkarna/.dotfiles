@@ -7,6 +7,7 @@
   st = status -sb
   br = branch
   up = pull
+  yesterday = !git-commits-since yesterday
 [core]
 	editor = vim
 [color]
