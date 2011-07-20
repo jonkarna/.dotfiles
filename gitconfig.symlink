@@ -12,6 +12,22 @@
 	editor = vim
 [color]
 	ui = true
+[color "diff"]
+	meta = blue bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "branch"]
+	current = yellow reverse
+	local = yellow bold
+	remote = green bold
+	plain = red bold
+[color "status"]
+	added = yellow
+	changed = green bold
+	untracked = blue bold
+[push]
+  default = current
 [github]
   user = jonkarna
 [url "git@github.com:"]
