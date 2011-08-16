@@ -19,3 +19,6 @@
 [submodule "vim.symlink/bundle/vim-trailing-whitespace"]
 	path = vim.symlink/bundle/vim-trailing-whitespace
 	url = https://github.com/bronson/vim-trailing-whitespace.git
+[submodule "vim.symlink/bundle/ack.vim"]
+	path = vim.symlink/bundle/ack.vim
+	url = github:mileszs/ack.vim
