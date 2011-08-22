@@ -55,4 +55,14 @@ alias createpg='createdb -U postgres -h localhost -T template_pgrouting'
 # ruby
 alias b='bundle exec'
 
+# rails
+alias rs='rails s'
+alias rst='RAILS_ENV=test rails s'
+alias rg='rails g'
+alias rgmig='rails g migration'
+alias migrate='rake db:migrate db:test:clone'
+
+#misc
+alias p='cd projects && cd'
+
 alias reload='source ~/.zshrc'
