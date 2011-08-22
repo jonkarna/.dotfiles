@@ -63,6 +63,6 @@ alias rgmig='rails g migration'
 alias migrate='rake db:migrate db:test:clone'
 
 #misc
-alias p='cd projects && cd'
+alias p='cd ~/projects && cd'
 
 alias reload='source ~/.zshrc'
