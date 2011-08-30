@@ -8,3 +8,5 @@ gem: --no-ri --no-rdoc
 :backtrace: false
 :bulk_threshold: 1000
 :benchmark: false
+
+custom_shebang: $env bundler_wrapper

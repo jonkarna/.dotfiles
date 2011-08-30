@@ -6,6 +6,7 @@ for config_file ($ZSH/*) source $config_file
 
 # load rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+__rvm_project_rvmrc
 
 # use .zshrc.local for settings specific to one system
 [[ -f ~/.zshrc.local ]] && . ~/.zshrc.local
