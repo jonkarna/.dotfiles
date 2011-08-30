@@ -8,8 +8,11 @@
   br = branch
   up = pull
   yesterday = !git-commits-since yesterday
+[apply]
+  whitespace = nowarn
 [core]
 	editor = vim
+  excludesfile = ~/.gitignore
 [color]
 	ui = true
 [color "diff"]
