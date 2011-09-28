@@ -61,6 +61,10 @@ alias rst='RAILS_ENV=test rails s'
 alias rg='rails g'
 alias rgmig='rails g migration'
 alias migrate='rake db:migrate db:test:clone'
+alias longtail='tail -f -n 1000'
+
+# rvm
+alias rvm-update='rvm get latest && rvm rubygems current'
 
 #misc
 alias p='cd ~/projects && cd'
