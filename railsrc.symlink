@@ -7,6 +7,7 @@ rescue LoadError
 end
 
 def change_log(stream)
+  return unless defined? ActiveRecord
   ActiveRecord::Base.logger = Logger.new(stream)
   ActiveRecord::Base.clear_active_connections!
 end
