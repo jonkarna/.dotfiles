@@ -4,7 +4,8 @@ else
   export PS1='%3~$(git_info_for_prompt)%# '
 fi
 
-export PATH="$HOME/bin:$HOME/.dotfiles/bin:$HOME/.dotfiles/git-extras/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.dotfiles/bin:$HOME/.dotfiles/git-extras/bin:$HOME/.dotfiles/git-diff_grep:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
 export JRUBY_OPTS=--1.9
 export LSCOLORS="Gxfxcxdxbxegedabagacad"

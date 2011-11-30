@@ -56,17 +56,25 @@ alias createpg='createdb -U postgres -h localhost -T template_pgrouting'
 alias b='bundle exec'
 
 # rails
-alias rs='rails s'
-alias rst='RAILS_ENV=test rails s'
-alias rg='rails g'
-alias rgmig='rails g migration'
-alias migrate='rake db:migrate db:test:clone'
+alias rs='rails server'
+alias rc='rails console'
+alias rst='RAILS_ENV=test rails server'
+alias rg='rails generate'
+alias rgmig='rails generate migration'
+alias migrate='bundle exec rake db:migrate'
+alias migrate_up='bundle exec rake db:migrate:up'
+alias migrate_down='bundle exec rake db:migrate:down'
 alias longtail='tail -f -n 1000'
 
 # rvm
 alias rvm-update='rvm get latest && rvm rubygems current'
+alias railsreal='rvmsudo REMOTE_DB=iehlert_development REAL_DOMAINS=1 bundle exec rails s -p 80'
 
 #misc
 alias p='cd ~/projects && cd'
+
+# nginx
+alias stop_nginx='sudo /opt/nginx/sbin/nginx -s stop'
+alias start_nginx='sudo /opt/nginx/sbin/nginx'
 
 alias reload='source ~/.zshrc'
