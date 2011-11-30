@@ -22,3 +22,6 @@
 [submodule "vim.symlink/bundle/ack.vim"]
 	path = vim.symlink/bundle/ack.vim
 	url = github:mileszs/ack.vim
+[submodule "git-diff-grep"]
+	path = git-diff-grep
+	url = https://github.com/oscardelben/git-diff-grep.git
