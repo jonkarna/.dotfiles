@@ -11,7 +11,7 @@
 [apply]
   whitespace = nowarn
 [core]
-	editor = /usr/bin/vim
+	editor = vim
   excludesfile = ~/.gitignore
 [color]
 	ui = true
@@ -45,11 +45,3 @@
   insteadOf = gist:
 [url "git@heroku.com:"]
   insteadOf = heroku:
-[url "git@bitbucket.org:"]
-  pushInsteadOf = bitbucket:
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
