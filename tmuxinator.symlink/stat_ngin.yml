@@ -1,0 +1,12 @@
+project_name: stat_ngin
+project_root: ~/projects/stat_ngin
+tabs:
+  - editor:
+      layout: main-vertical
+      panes:
+        - vim
+        - top
+        - #empty, will just run plain bash
+  - shell: git pull
+  - server: rails s -p 3001
+  - console: rails c
