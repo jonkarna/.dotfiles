@@ -68,7 +68,9 @@ alias longtail='tail -f -n 1000'
 
 # rvm
 alias rvm-update='rvm get latest && rvm rubygems current'
-alias railsreal='rvmsudo REMOTE_DB=iehlert_development REAL_DOMAINS=1 bundle exec rails s -p 80'
+alias rs_shared='rvmsudo REMOTE_DB=iehlert_development REAL_DOMAINS=1 bundle exec rails s -p 80'
+alias rc_shared='rvmsudo REMOTE_DB=iehlert_development REAL_DOMAINS=1 bundle exec rails console'
+alias be_shared='rvmsudo REMOTE_DB=iehlert_development REAL_DOMAINS=1 bundle exec'
 
 #misc
 alias p='cd ~/projects && cd'
