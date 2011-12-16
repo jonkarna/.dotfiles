@@ -15,13 +15,16 @@
 	url = https://github.com/tpope/vim-fugitive.git
 [submodule "vim.symlink/bundle/vim-rails"]
 	path = vim.symlink/bundle/vim-rails
-	url = github:tpope/vim-rails
+	url = https://github.com/tpope/vim-rails
 [submodule "vim.symlink/bundle/vim-trailing-whitespace"]
 	path = vim.symlink/bundle/vim-trailing-whitespace
 	url = https://github.com/bronson/vim-trailing-whitespace.git
 [submodule "vim.symlink/bundle/ack.vim"]
 	path = vim.symlink/bundle/ack.vim
-	url = github:mileszs/ack.vim
+	url = https://github.com/mileszs/ack.vim
 [submodule "git-diff-grep"]
 	path = git-diff-grep
 	url = https://github.com/oscardelben/git-diff-grep.git
+[submodule "vim.symlink/bundle/nerdtree.git"]
+	path = vim.symlink/bundle/nerdtree.git
+	url = https://github.com/scrooloose/nerdtree.git
