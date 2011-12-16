@@ -34,9 +34,6 @@
 [github]
   user = jonkarna
 [url "git@github.com:"]
-  pushInsteadOf = github:
-  pushInsteadOf = git://github.com/
-[url "git://github.com/"]
   insteadOf = github:
 [url "git@gist.github.com:"]
   pushInsteadOf = gist:
