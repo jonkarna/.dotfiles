@@ -1,0 +1,8 @@
+#!/bin/sh
+
+branch=$1
+test -z $branch && echo "branch required." && exit 1
+
+git fetch origin
+git checkout --track -b $branch origin/$branch
+git pull
