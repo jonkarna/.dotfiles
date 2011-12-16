@@ -1,4 +1,5 @@
 set nocompatible
+let mapleader = ","
 
 filetype off
 call pathogen#runtime_append_all_bundles()
@@ -31,13 +32,21 @@ set modeline
 set modelines=10
 
 syntax on
-color delek
+colorscheme darkblue
+set background=light
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
 
 " MacVIM shift+arrow-keys behavior (required in .vimrc)
 let macvim_hig_shift_movement = 1
+
+" NERDTree
+nmap <leader>n :NERDTreeToggle<CR>
+let g:NERDChristmasTree=1
+let g:NERDTreeDirArrows=1
+" let g:NERDTreeQuitOnOpen=1
+" let g:NERDTreeShowHidden=1
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
