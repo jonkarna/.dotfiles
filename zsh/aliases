@@ -1,7 +1,7 @@
 # http://maestric.com/doc/unix/setup_ubuntu704_for_java_development
 # path
 # export PATH=$PATH:~/bin
- 
+
 # Environment
 # export JAVA_HOME=/usr/lib/jvm/java-1.5.0-sun
 # export CATALINA_HOME=/usr/share/tomcat5.5
@@ -38,16 +38,16 @@ alias pgstart='sudo /etc/init.d/postgresql start'
 alias pgstop='sudo /etc/init.d/postgresql stop'
 alias pgst='sudo /etc/init.d/postgresql status'
 alias createpg='createdb -U postgres -h localhost -T template_pgrouting'
- 
+
 # svn
 # alias stm='svn status | grep "M "'
 # alias st='svn status'
 # alias di='svn diff'
- 
+
 # apps
 # alias thunderbird='mozilla-thunderbird'
 # alias nedit='XLIB_SKIP_ARGB_VISUALS=1 nedit'
- 
+
 # database
 # alias db='psql test01'
 # alias dbbackup='pg_dump test01 | bzip2 >  ~/archive/backup/db/test01_`date +%Y-%m-%d_%HH%M`.dump.bz2'
@@ -68,15 +68,28 @@ alias longtail='tail -f -n 1000'
 
 # rvm
 alias rvm-update='rvm get latest && rvm rubygems current'
-alias rs_shared='rvmsudo REMOTE_DB=iehlert_development REAL_DOMAINS=1 bundle exec rails s -p 80'
-alias rc_shared='rvmsudo REMOTE_DB=iehlert_development REAL_DOMAINS=1 bundle exec rails console'
-alias be_shared='rvmsudo REMOTE_DB=iehlert_development REAL_DOMAINS=1 bundle exec'
 
-#misc
+# misc
 alias p='cd ~/projects && cd'
 
-# nginx
-alias stop_nginx='sudo /opt/nginx/sbin/nginx -s stop'
-alias start_nginx='sudo /opt/nginx/sbin/nginx'
+# tmux
+alias t='tmux'
+alias ta='tmux attach -t'
+alias tk='tmux kill-session -t'
+
+# git
+alias gl='git pull'
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+alias gp='git push'
+alias gd='git diff'
+alias gc='git commit'
+alias gca='git commit -a'
+alias gco='git checkout'
+alias gcot='git-checkout-tracking-branch'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gst='git st'
+alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
+alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 
 alias reload='source ~/.zshrc'
