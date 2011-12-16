@@ -5,8 +5,9 @@ tabs:
       layout: main-vertical
       panes:
         - vim
-        - top
-        - #empty, will just run plain bash
-  - shell: git pull
-  - server: rails s
-  - console: rails c
+        - git pull
+  - server:
+      layout: main-vertical
+      panes:
+        - rails s
+        - rails c
