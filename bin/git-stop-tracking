@@ -1,0 +1,8 @@
+#!/bin/sh
+
+branch=$1
+test -z $branch && branch=`git branchname`
+
+echo "Removing tracking from branch $branch"
+git config --unset branch.$branch.merge
+git config --unset branch.$branch.remote

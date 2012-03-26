@@ -1,0 +1,8 @@
+project_name: ssh
+project_root: ~/projects/ngin
+tabs:
+  - editor:
+      layout: main-vertical
+      panes:
+        - vim
+        -

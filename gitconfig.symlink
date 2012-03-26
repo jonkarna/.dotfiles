@@ -2,17 +2,51 @@
 	name = Jon Karna
 	email = ipg49vv2@gmail.com
 [alias]
-  co = checkout
-  ci = checkin
-  st = status -sb
+  a = add
+  aa = add .
   br = branch
-  up = pull
-  yesterday = !git-commits-since yesterday
-[apply]
-  whitespace = nowarn
+  brs = branch -a
+  c = commit
+  cf = !git status -sb | grep UU
+  cm = commit -m
+  co = checkout
+  co-track = !git-create-tracking-branch
+  d = diff
+  dc = diff --cached
+  dcm = !git diff --cached | mate
+  dm = !git diff | mate
+  ff = !git fetch && git wtf
+  head = log -n1
+  lg = log --graph --abbrev-commit --date=relative
+  ls = ls-files
+  m = merge
+  p = push
+  rhh = reset --hard HEAD
+  s = status
+  st = status -sb
+  u = pull
+  ur = pull --rebase
+  added = diff --cached --name-only
+  amend = commit --amend
+  ammend = commit --amend
+  branches-with = branch --contains
+  branchname = !git branch | grep '^* ' | awk '{ print $2 }'
+  changes = "!f() { git log --pretty=format:'* %s' $1..$2; }; f"
+  changesasdf = "!f() { git log --pretty=format:\"* %s\" $1..$2; }; f"
+  deleted = ls-files --deleted
+  details = log -n1 -p --format=fuller
+  mergeupstream = !git fetch upstream && git merge upstream/master master
+  new = ls-files --others --exclude-standard
+  searchlogs = !git log --oneline | grep
+  sub = submodule update --init --recursive
+  unstage = reset HEAD
+  unstash = stash pop
 [core]
 	editor = vim
   excludesfile = ~/.gitignore
+  quotepath = false
+  autocrlf = input
+  whitespace = space-before-tab, trailing-space
 [color]
 	ui = true
 [color "diff"]
@@ -31,6 +65,16 @@
 	untracked = blue bold
 [push]
   default = current
+[diff]
+  tool = opendiff
+[merge]
+  tool = opendiff
+[difftool]
+  prompt = false
+[mergetool]
+  prompt = false
+[rerere]
+  enabled = true
 [github]
   user = jonkarna
 [url "git@github.com:"]

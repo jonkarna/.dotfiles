@@ -56,15 +56,14 @@ alias createpg='createdb -U postgres -h localhost -T template_pgrouting'
 alias b='bundle exec'
 
 # rails
-alias rs='rails server'
-alias rc='rails console'
+alias r='rails'
+alias rs='rails server' # r s
+alias rc='rails console' # r c
 alias rst='RAILS_ENV=test rails server'
-alias rg='rails generate'
-alias rgmig='rails generate migration'
+alias rg='rails generate' # r g
 alias migrate='bundle exec rake db:migrate'
-alias migrate_up='bundle exec rake db:migrate:up'
-alias migrate_down='bundle exec rake db:migrate:down'
-alias longtail='tail -f -n 1000'
+alias rollback='bundle exec rake db:rollback'
+alias long_tail='tail -f -n 1000'
 
 # rvm
 alias rvm-update='rvm get latest && rvm rubygems current'
@@ -76,20 +75,14 @@ alias p='cd ~/projects && cd'
 alias t='tmux'
 alias ta='tmux attach -t'
 alias tk='tmux kill-session -t'
+alias tn='tmux new -s'
 
 # git
-alias gl='git pull'
-alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
-alias gp='git push'
-alias gd='git diff'
-alias gc='git commit'
-alias gca='git commit -a'
-alias gco='git checkout'
-alias gcot='git-checkout-tracking-branch'
-alias gb='git branch'
-alias gba='git branch -a'
-alias gst='git st'
-alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
-alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+alias g='git'
+
+# side by side diff
+alias gside="git difftool -t opendiff"
+# resolve merge conflicts with filemerge
+alias gmergetool="git mergetool -t opendiff"
 
 alias reload='source ~/.zshrc'

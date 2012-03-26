@@ -1,0 +1,9 @@
+project_name: sport_ngin
+project_root: ~/projects/sport_ngin_live
+pre: start_nginx
+tabs:
+  - editor:
+      layout: main-vertical
+      panes:
+        - vim
+        - git pull
