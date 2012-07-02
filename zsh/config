@@ -13,7 +13,6 @@ export JAVA_HOME=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Hom
 export JRUBY_OPTS=--1.9
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
 export CLICOLOR=true
-export USE_BUNDLER=force
 export EDITOR=mvim
 
 fpath=($ZSH/functions $fpath)
