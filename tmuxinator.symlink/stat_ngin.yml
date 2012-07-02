@@ -9,5 +9,5 @@ tabs:
   - server:
       layout: main-vertical
       panes:
-        - rails s -p 3001
+        - bundle && bundle exec rake RAILS_ENV=test meta_data:reset_data && RAILS_ENV=test rails s -p 3001
         - rails c
