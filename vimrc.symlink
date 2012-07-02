@@ -32,7 +32,7 @@ set modeline
 set modelines=10
 
 syntax on
-colorscheme vividchalk
+colorscheme ron
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
@@ -45,6 +45,19 @@ let g:CommandTMaxHeight=5
 let g:CommandTMatchWindowReverse=1
 let g:CommandTAcceptSelectionMap = '<C-t>'
 let g:CommandTAcceptSelectionTabMap = '<CR>'
+
+function! InsertTabWrapper()
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-n>"
+  endif
+endfunction
+
+" Tab wrapper
+imap <silent> <tab> <c-r>=InsertTabWrapper()<CR>
+imap <silent> <s-tab> <c-p>
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
