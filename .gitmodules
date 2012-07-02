@@ -25,9 +25,6 @@
 [submodule "git-diff-grep"]
 	path = git-diff-grep
 	url = https://github.com/oscardelben/git-diff-grep.git
-[submodule "vim.symlink/bundle/command-t"]
-	path = vim.symlink/bundle/command-t
-	url = git://git.wincent.com/command-t.git
 [submodule "vim.symlink/bundle/vividchalk"]
 	path = vim.symlink/bundle/vividchalk
 	url = git://github.com/tpope/vim-vividchalk.git
