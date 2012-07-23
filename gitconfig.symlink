@@ -77,8 +77,12 @@
   enabled = true
 [github]
   user = jonkarna
+[url "git://github.com/"]
+  # Read-only
+  insteadOf = gh:
 [url "git@github.com:"]
-  insteadOf = github:
+  # With write access
+  insteadOf = wgh:
 [url "git@gist.github.com:"]
   pushInsteadOf = gist:
   pushInsteadOf = git://gist.github.com/
