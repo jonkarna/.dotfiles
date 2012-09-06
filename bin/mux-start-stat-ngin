@@ -1,0 +1,23 @@
+tmux start-server
+
+if ! $(tmux has-session -t 'stat_ngin'); then
+
+cd ~/projects/tstmedia/stat_ngin
+
+tmux set-option -g base-index 1
+tmux set-option -t 'stat_ngin' default-path ~/projects/tstmedia/stat_ngin
+
+tmux new-session -d -s 'stat_ngin' -n 'editor'
+tmux new-window -t 'stat_ngin:2' -n 'server'
+
+tmux send-keys -t 'stat_ngin:1' 'vim' C-m
+tmux splitw -t 'stat_ngin:1'
+tmux select-layout -t 'stat_ngin:1' 'main-vertical'
+
+tmux send-keys -t 'stat_ngin:2' 'git pull && bundle && bundle exec rake RAILS_ENV=test meta_data:reset_data && RAILS_ENV=test rails server -p 3001' C-m
+tmux splitw -t 'stat_ngin:2'
+tmux select-layout -t 'stat_ngin:2' 'main-vertical'
+
+tmux select-window -t 'stat_ngin:1'
+
+fi
