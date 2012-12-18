@@ -82,3 +82,6 @@ set -g status-justify centre
 # moving between sessions
 bind-key -r ( switch-client -p
 bind-key -r ) switch-client -n
+
+bind C-p run "tmux set-buffer \"$(xclip -o)\"; tmux paste-buffer"
+bind C-y save-buffer /tmp/tmux-buffer \; run-shell "cat /tmp/tmux-buffer | xclip -sel clip"
