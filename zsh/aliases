@@ -53,24 +53,27 @@ alias createpg='createdb -U postgres -h localhost -T template_pgrouting'
 # alias dbbackup='pg_dump test01 | bzip2 >  ~/archive/backup/db/test01_`date +%Y-%m-%d_%HH%M`.dump.bz2'
 
 # ruby
-alias b='bundle exec'
+alias b='bundle'
+alias be='bundle exec'
+alias bet='bundle exec ruby -I test'
 
 # rails
 alias r='rails'
-alias rs='rails server' # r s
-alias rc='rails console' # r c
+alias rs='rails server'
+alias rc='rails console'
 alias rst='RAILS_ENV=test rails server'
-alias rg='rails generate' # r g
+alias rg='rails generate'
 alias migrate='bundle exec rake db:migrate'
 alias rollback='bundle exec rake db:rollback'
 alias long_tail='tail -f -n 1000'
+alias flushmc="echo \"flush_all\" | nc localhost 11211"
 
 # rvm
 alias rvm-update='rvm get latest && rvm rubygems current'
 
 # misc
-alias p='cd ~/projects && cd'
 alias mysql-cleanse='mysql -uroot -e "show databases" | grep -v Database | grep -v mysql | grep -v information_schema | gawk '"'"'{print "drop database `" $1 "`;select sleep(0.1);"}'"'"' | mysql -uroot'
+alias mongo-cleanse='echo "show dbs" | mongo | grep stat_ngin_ | awk '"'"'{print $1}'"'"' | xargs -n1 mongo --eval "db.dropDatabase()"'
 
 # tmux
 alias t='tmux'
