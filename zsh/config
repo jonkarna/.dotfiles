@@ -8,6 +8,7 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="$HOME/bin:$HOME/.dotfiles/bin:$HOME/.dotfiles/git-extras/bin:$PATH"
 export PATH="$HOME/.dotfiles/git-diff-grep:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
+export PATH="/usr/local/heroku/bin:$PATH"
 export DYLD_LIBRARY_PATH="/usr/local/mysql/lib/:$DYLD_LIBRARY_PATH"
 export JAVA_HOME=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
 export JRUBY_OPTS=--1.9
