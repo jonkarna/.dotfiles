@@ -49,9 +49,32 @@ function! InsertTabWrapper()
   endif
 endfunction
 
+function! RunCurrentTest()
+  let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\|_test.rb\)$') != -1
+  if in_test_file
+    call SetTestFile()
+
+    if match(expand('%'), '\.feature$') != -1
+      call SetTestRunner("!cucumber")
+      exec g:bjo_test_runner g:bjo_test_file
+    elseif match(expand('%'), '_spec\.rb$') != -1
+      call SetTestRunner("!rspec")
+      exec g:bjo_test_runner g:bjo_test_file
+    else
+      call SetTestRunner("!ruby -Itest")
+      exec g:bjo_test_runner g:bjo_test_file
+    endif
+  else
+    exec g:bjo_test_runner g:bjo_test_file
+  endif
+endfunction
+
 " Tab wrapper
 imap <silent> <tab> <c-r>=InsertTabWrapper()<CR>
 imap <silent> <s-tab> <c-p>
+
+" Run test
+map <Leader>t :call RunCurrentTest()<CR>
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
