@@ -6,6 +6,7 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 filetype plugin indent on
 
+set clipboard=unnamed
 set backspace=indent,eol,start
 set nobackup
 set nowritebackup
@@ -29,7 +30,6 @@ set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 set laststatus=2
 set modeline
-set modelines=10
 
 syntax on
 colorscheme ron
