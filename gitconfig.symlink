@@ -4,10 +4,12 @@
 [alias]
   a = add
   aa = add .
+  angry-log = log --no-merges -i -E --grep=\"(fuck|shit|bitch|damn|piss)\"
+  anger-stats = !git angry-log | tr '[:upper:]' '[:lower:]' | tr '[:space:]' '\n' | sort | uniq -c | sort -nr | grep -iE \"(fuck|shit|bitch|damn|piss)\"
   br = branch
-  brs = branch -a
+  brs = branch --all
   c = commit
-  cf = !git status -sb | grep UU
+  cf = !git status --short --branch | grep UU
   cm = commit -m
   co = checkout
   co-track = !git-create-tracking-branch
@@ -23,7 +25,7 @@
   p = push
   rhh = reset --hard HEAD
   s = status
-  st = status -sb
+  st = status --short --branch
   u = pull
   ur = pull --rebase
   added = diff --cached --name-only
