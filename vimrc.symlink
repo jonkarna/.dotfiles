@@ -16,10 +16,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-vividchalk'
-
-" vim-scripts repos
-Bundle 'ack.vim'
-Bundle 'vim-trailing-whitespace'
+Bundle 'vim-scripts/ack.vim'
+Bundle 'vim-scripts/trailing-whitespace'
 
 filetype plugin indent on
 
