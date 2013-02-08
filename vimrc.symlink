@@ -50,8 +50,6 @@ set smartcase
 syntax on
 colorscheme vividchalk
 
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
-
 autocmd FileType markdown setlocal spell
 autocmd FileType markdown setlocal wrap
 
@@ -69,6 +67,9 @@ endfunction
 " Tab wrapper
 imap <silent> <tab> <c-r>=InsertTabWrapper()<CR>
 imap <silent> <s-tab> <c-p>
+
+" code pasting from osx system clipboard
+map <leader>v "+p
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
