@@ -11,48 +11,50 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " github repos
-Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-ruby'
 Bundle 'tpope/vim-vividchalk'
-Bundle 'vim-scripts/ack.vim'
 Bundle 'vim-scripts/trailing-whitespace'
 
 filetype plugin indent on
 
 set clipboard=unnamed
-set backspace=indent,eol,start
 set nobackup
 set nowritebackup
 set noswapfile
-set history=50
+set encoding=utf-8
+set nowrap
+set list listchars=tab:»·,trail:·
+set wildmode=list:longest,list:full
+
+" Status Line
 set number
 set ruler
 set showcmd
+set laststatus=2
+
+" Tab
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+" Search
 set incsearch
 set hlsearch
 set ignorecase
 set smartcase
-set encoding=utf-8
-set nowrap
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-set list listchars=tab:\ \ ,trail:·
-set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
-set laststatus=2
-set modeline
 
 syntax on
-colorscheme ron
+colorscheme vividchalk
 
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
-au BufRead,BufNewFile *.md set filetype=markdown
-au BufRead,BufNewFile *.md setlocal spell
-au BufRead,BufNewFile *.md setlocal textwidth=80
+
+autocmd FileType markdown setlocal spell
+autocmd FileType markdown setlocal wrap
+
+let g:html_indent_tags = 'li\|p'
 
 function! InsertTabWrapper()
   let col = col('.') - 1
