@@ -4,20 +4,19 @@ if ! $(tmux has-session -t 'ngin'); then
 
 cd ~/projects/tstmedia/ngin
 
-tmux set-option -g base-index 1
 tmux set-option -t 'ngin' default-path ~/projects/tstmedia/ngin
 
 tmux new-session -d -s 'ngin' -n 'editor'
-tmux new-window -t 'ngin:2' -n 'server'
+tmux new-window -t 'ngin:1' -n 'server'
 
-tmux send-keys -t 'ngin:1' 'vim' C-m
+tmux send-keys -t 'ngin:0' 'vim' C-m
+tmux splitw -t 'ngin:0'
+tmux select-layout -t 'ngin:0' 'main-vertical'
+
+tmux send-keys -t 'ngin:1' 'git pull && bundle' C-m
 tmux splitw -t 'ngin:1'
 tmux select-layout -t 'ngin:1' 'main-vertical'
 
-tmux send-keys -t 'ngin:2' 'git pull && bundle' C-m
-tmux splitw -t 'ngin:2'
-tmux select-layout -t 'ngin:2' 'main-vertical'
-
-tmux select-window -t 'ngin:1'
+tmux select-window -t 'ngin:0'
 
 fi
