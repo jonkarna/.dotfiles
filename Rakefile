@@ -10,3 +10,18 @@ task :install do
     system %Q{ln -s "$PWD/#{linkable}" "$HOME/.#{file}"}
   end
 end
+
+
+namespace :vundle do
+
+  task :clone do
+    exec 'git clone https://github.com/gmarik/vundle.git vim.symlink/bundle/vundle'
+  end
+
+  task :install do
+    exec 'vim +BundleInstall +qall'
+  end
+
+end
+
+task default: :install
