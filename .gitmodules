@@ -1,9 +1,3 @@
-[submodule "elastic/elasticsearch-head"]
-	path = elastic/elasticsearch-head
-	url = https://github.com/mobz/elasticsearch-head.git
-[submodule "elastic/bigdesk"]
-	path = elastic/bigdesk
-	url = https://github.com/lukas-vlcek/bigdesk.git
 [submodule "git-extras"]
-	path = git-extras
-	url = https://github.com/visionmedia/git-extras.git
+  path = git-extras
+  url = https://github.com/visionmedia/git-extras.git
