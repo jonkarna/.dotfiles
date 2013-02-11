@@ -17,8 +17,11 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-vividchalk'
 Bundle 'vim-scripts/trailing-whitespace'
+
+" colorshemes
+Bundle 'tpope/vim-vividchalk'
+Bundle 'wgibbs/vim-irblack'
 
 filetype plugin indent on
 
@@ -54,10 +57,7 @@ nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
 syntax on
-colorscheme vividchalk
-
-autocmd FileType markdown setlocal spell
-autocmd FileType markdown setlocal wrap
+colorscheme ir_black
 
 let g:html_indent_tags = 'li\|p'
 
