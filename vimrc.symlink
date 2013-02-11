@@ -1,5 +1,5 @@
 set nocompatible
-let mapleader = ","
+let mapleader = " "
 
 filetype off
 
@@ -11,6 +11,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " github repos
+Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
@@ -28,7 +29,6 @@ set noswapfile
 set encoding=utf-8
 set nowrap
 set list listchars=tab:»·,trail:·
-set wildmode=list:longest,list:full
 
 " Status Line
 set number
@@ -47,6 +47,12 @@ set hlsearch
 set ignorecase
 set smartcase
 
+" Get off my lawn
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
+
 syntax on
 colorscheme vividchalk
 
@@ -55,6 +61,10 @@ autocmd FileType markdown setlocal wrap
 
 let g:html_indent_tags = 'li\|p'
 
+" Tab completion
+" will insert tab at beginning of line,
+" will use completion if not at beginning
+set wildmode=list:longest,list:full
 function! InsertTabWrapper()
   let col = col('.') - 1
   if !col || getline('.')[col - 1] !~ '\k'
@@ -63,15 +73,12 @@ function! InsertTabWrapper()
     return "\<c-n>"
   endif
 endfunction
+inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 
-" Tab wrapper
-imap <silent> <tab> <c-r>=InsertTabWrapper()<CR>
-imap <silent> <s-tab> <c-p>
-
-" code pasting from osx system clipboard
+" Code pasting from osx system clipboard
 map <leader>v "+p
 
-" Include user's local vim config
+" Include local vim config
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
