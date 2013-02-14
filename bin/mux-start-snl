@@ -4,20 +4,19 @@ if ! $(tmux has-session -t 'snl'); then
 
 cd ~/projects/tstmedia/sport_ngin_live
 
-tmux set-option -g base-index 1
 tmux set-option -t 'snl' default-path ~/projects/tstmedia/sport_ngin_live
 
 tmux new-session -d -s 'snl' -n 'editor'
-tmux new-window -t 'snl:2' -n 'server'
+tmux new-window -t 'snl:1' -n 'server'
 
-tmux send-keys -t 'snl:1' 'vim' C-m
+tmux send-keys -t 'snl:0' 'vim' C-m
+tmux splitw -t 'snl:0'
+tmux select-layout -t 'snl:0' 'main-vertical'
+
+tmux send-keys -t 'snl:1' 'git pull && bundle' C-m
 tmux splitw -t 'snl:1'
 tmux select-layout -t 'snl:1' 'main-vertical'
 
-tmux send-keys -t 'snl:2' 'git pull && bundle' C-m
-tmux splitw -t 'snl:2'
-tmux select-layout -t 'snl:2' 'main-vertical'
-
-tmux select-window -t 'snl:1'
+tmux select-window -t 'snl:0'
 
 fi
