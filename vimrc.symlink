@@ -15,13 +15,14 @@ Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
-Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-bundler'
 Bundle 'vim-scripts/trailing-whitespace'
+Bundle 'tsaleh/vim-tmux'
 
 " colorshemes
 Bundle 'tpope/vim-vividchalk'
-Bundle 'wgibbs/vim-irblack'
+Bundle 'twerth/ir_black'
+Bundle 'nanotech/jellybeans.vim'
 
 filetype plugin indent on
 
