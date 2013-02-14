@@ -1,5 +1,0 @@
-if [ `uname` = "Linux" ]; then
-  chromium-browser ~/.dotfiles/elastic/elasticsearch-head/index.html
-else
-  open ~/.dotfiles/elastic/elasticsearch-head/index.html
-fi

@@ -1,5 +1,0 @@
-if [ `uname` = "Linux" ]; then
-  chromium-browser ~/.dotfiles/elastic/bigdesk/index.html
-else
-  open ~/.dotfiles/elastic/bigdesk/index.html
-fi
