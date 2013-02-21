@@ -1,22 +1,6 @@
 # utils
-alias cdd='cd ~/Desktop'
-alias l='ls -lh'
-alias lr='ls -lrth'
-alias ll='ls -lh | more'
-alias lll='ls -alh'
-alias vi='vim'
 alias -g G='| grep'
 alias -g A='| ack'
-
-# prompt
-# PS1="[\t \w]"
-# PS1="\e[0;34m[\e[0;31m\t \e[0;35m\w\e[0;34m] \e[0m"
-
-# postgresql
-alias pgstart='sudo /etc/init.d/postgresql start'
-alias pgstop='sudo /etc/init.d/postgresql stop'
-alias pgst='sudo /etc/init.d/postgresql status'
-alias createpg='createdb -U postgres -h localhost -T template_pgrouting'
 
 # ruby
 alias b='bundle'
@@ -53,10 +37,5 @@ alias tn='tmux new -s'
 
 # git
 alias g='git'
-
-# side by side diff
-alias gside="git difftool -t opendiff"
-# resolve merge conflicts with filemerge
-alias gmergetool="git mergetool -t opendiff"
 
 alias reload='source ~/.zshrc'
