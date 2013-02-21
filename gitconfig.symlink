@@ -1,70 +1,51 @@
 [user]
-	name = Jon Karna
-	email = ipg49vv2@gmail.com
+  name = Jon Karna
+  email = ipg49vv2@gmail.com
 [alias]
   a = add
   aa = add .
-  angry-log = log --no-merges -i -E --grep=\"(fuck|shit|bitch|damn|piss)\"
-  anger-stats = !git angry-log | tr '[:upper:]' '[:lower:]' | tr '[:space:]' '\n' | sort | uniq -c | sort -nr | grep -iE \"(fuck|shit|bitch|damn|piss)\"
   br = branch
   brs = branch --all
   c = commit
   cf = !git status --short --branch | grep UU
   cm = commit -m
   co = checkout
-  co-track = !git-create-tracking-branch
   d = diff
-  dc = diff --cached
-  dcm = !git diff --cached | mate
-  dm = !git diff | mate
-  ff = !git fetch && git wtf
-  head = log -n1
-  lg = log --graph --abbrev-commit --date=relative
-  ls = ls-files
-  m = merge
+  lg = log --abbrev-commit --date=relative
   p = push
   rhh = reset --hard HEAD
-  s = status
   st = status --short --branch
   u = pull
   ur = pull --rebase
-  added = diff --cached --name-only
   amend = commit --amend
   ammend = commit --amend
-  branches-with = branch --contains
+  angry-log = log --no-merges -i -E --grep=\"(fuck|shit|bitch|damn|piss)\"
+  anger-stats = !git angry-log | tr '[:upper:]' '[:lower:]' | tr '[:space:]' '\n' | sort | uniq -c | sort -nr | grep -iE \"(fuck|shit|bitch|damn|piss)\"
   branchname = !git branch | grep '^* ' | awk '{ print $2 }'
-  changes = "!f() { git log --pretty=format:'* %s' $1..$2; }; f"
-  changesasdf = "!f() { git log --pretty=format:\"* %s\" $1..$2; }; f"
-  deleted = ls-files --deleted
-  details = log -n1 -p --format=fuller
-  mergeupstream = !git fetch upstream && git merge upstream/master master
-  new = ls-files --others --exclude-standard
-  searchlogs = !git log --oneline | grep
-  sub = submodule update --init --recursive
   unstage = reset HEAD
   unstash = stash pop
 [core]
-	editor = vim
+  editor = vim
   excludesfile = ~/.gitignore
   quotepath = false
   autocrlf = input
   whitespace = space-before-tab, trailing-space
 [color]
-	ui = true
+  ui = true
 [color "diff"]
-	meta = blue bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+  meta = blue bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
 [color "branch"]
-	current = yellow reverse
-	local = yellow bold
-	remote = green bold
-	plain = red bold
+  current = yellow reverse
+  local = yellow bold
+  remote = green bold
+  plain = red bold
 [color "status"]
-	added = yellow
-	changed = green bold
-	untracked = blue bold
+  added = yellow
+  changed = green bold
+  untracked = blue bold
 [push]
   default = current
 [diff]
@@ -80,10 +61,8 @@
 [github]
   user = jonkarna
 [url "git://github.com/"]
-  # Read-only
   insteadOf = gh:
 [url "git@github.com:"]
-  # With write access
   insteadOf = wgh:
 [url "git@gist.github.com:"]
   pushInsteadOf = gist:
