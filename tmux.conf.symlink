@@ -42,25 +42,11 @@ bind r source-file ~/.tmux.conf
 
 # set-option -sg escape-time 1
 
-# set-option -g base-index 1
-
-# set-option -g mouse-select-pane on
-# set-window-option -g mode-mouse on
-# # set-window-option -g mode-mouse off
-
-# set-window-option -g monitor-activity on
-# set-option -g visual-activity on
-
-# set-option -g status-fg white
-# set-option -g status-bg black
-
 # set-window-option -g window-status-fg cyan
 # set-window-option -g window-status-bg default
 # set-window-option -g window-status-attr dim
 
-# set-window-option -g window-status-current-fg white
-# set-window-option -g window-status-current-bg red
-# set-window-option -g window-status-current-attr bright
+set-window-option -g window-status-current-bg red
 
 # set-option -g pane-border-fg green
 # set-option -g pane-border-bg black
@@ -72,8 +58,8 @@ bind r source-file ~/.tmux.conf
 # set-option -g message-bg black
 # set-option -g message-attr bright
 
-# set -g status-left-length 40
-# set-option -g status-left "#[fg=green]Session: #S #[fg=yellow]Window: #I #[fg=cyan]Pane: #P"
+set -g status-left-length 40
+set-option -g status-left "#[fg=green]Session: #S #[fg=yellow]Window: #I #[fg=cyan]Pane: #P"
 
 # set-option -g status-utf8 on
 
@@ -81,4 +67,4 @@ bind r source-file ~/.tmux.conf
 
 # set-option -g status-interval 1000
 
-# set -g status-justify centre
+set -g status-justify right
