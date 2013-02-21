@@ -15,6 +15,7 @@ export JRUBY_OPTS=--1.9
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
 export CLICOLOR=true
 export EDITOR=vim
+export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
 
 fpath=($ZSH/functions $fpath)
 
