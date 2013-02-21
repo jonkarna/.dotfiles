@@ -57,6 +57,10 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
+" makes K split lines (the opposite of J)
+command FixWhitespaceCurrentLine execute 's/ [ ]*$//'
+nmap K i<cr><esc>k:FixWhitespaceCurrentLine<enter>j
+
 syntax on
 colorscheme ir_black
 
