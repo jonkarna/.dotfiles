@@ -5,6 +5,8 @@ alias lr='ls -lrth'
 alias ll='ls -lh | more'
 alias lll='ls -alh'
 alias vi='vim'
+alias -g G='| grep'
+alias -g A='| ack'
 
 # prompt
 # PS1="[\t \w]"
@@ -29,10 +31,9 @@ alias rs='rails server'
 alias rc='rails console'
 alias rst='RAILS_ENV=test rails server'
 alias rg='rails generate'
+alias rk='bundle exec rake'
 alias migrate='bundle exec rake db:migrate'
 alias rollback='bundle exec rake db:rollback'
-alias long_tail='tail -f -n 1000'
-alias flushmc="echo \"flush_all\" | nc localhost 11211"
 
 # rvm
 alias rvm-update='rvm get latest && rvm rubygems current'
@@ -40,6 +41,8 @@ alias rvm-update='rvm get latest && rvm rubygems current'
 # misc
 alias mysql-cleanse='mysql -uroot -e "show databases" | grep -v Database | grep -v mysql | grep -v information_schema | gawk '"'"'{print "drop database `" $1 "`;select sleep(0.1);"}'"'"' | mysql -uroot'
 alias mongo-cleanse='echo "show dbs" | mongo | grep stat_ngin_ | awk '"'"'{print $1}'"'"' | xargs -n1 mongo --eval "db.dropDatabase()"'
+alias flushmc="echo \"flush_all\" | nc localhost 11211"
+alias long_tail='tail -f -n 1000'
 
 # tmux
 alias t='tmux'
