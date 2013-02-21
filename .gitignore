@@ -2,3 +2,4 @@
 *.netrwhist
 .rake_tasks~
 vim.symlink/bundle
+var/tmux_copy.log
