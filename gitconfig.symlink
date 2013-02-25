@@ -12,15 +12,8 @@
   co = checkout
   d = diff
   lg = log --abbrev-commit --date=relative
-  p = push
   rhh = reset --hard HEAD
   st = status --short --branch
-  u = pull
-  ur = pull --rebase
-  amend = commit --amend
-  ammend = commit --amend
-  angry-log = log --no-merges -i -E --grep=\"(fuck|shit|bitch|damn|piss)\"
-  anger-stats = !git angry-log | tr '[:upper:]' '[:lower:]' | tr '[:space:]' '\n' | sort | uniq -c | sort -nr | grep -iE \"(fuck|shit|bitch|damn|piss)\"
   branchname = !git branch | grep '^* ' | awk '{ print $2 }'
   unstage = reset HEAD
   unstash = stash pop
