@@ -18,6 +18,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-bundler'
 Bundle 'vim-scripts/trailing-whitespace'
 Bundle 'tsaleh/vim-tmux'
+Bundle 'airblade/vim-gitgutter'
 
 " colorshemes
 Bundle 'tpope/vim-vividchalk'
