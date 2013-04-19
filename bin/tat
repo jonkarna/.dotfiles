@@ -7,15 +7,12 @@ session_name=`basename $PWD`
 
 tmux start-server
 
-if ! $(tmux has-session -t $session_name); then
-
-tmux set-option -t $session_name default-path $PWD
-
-tmux new-session -d -s $session_name -n 'editor'
-tmux send-keys -t $session_name:0 'vim' C-m
-tmux splitw -t $session_name:0
-tmux select-layout -t $session_name:0 'main-vertical'
-
+if ! $(tmux has-session -t "$session_name"); then
+  tmux set-option -t "$session_name" default-path $PWD
+  tmux new-session -d -s "$session_name" -n 'editor'
+  tmux send-keys -t "$session_name":0 'vim' C-m
+  tmux splitw -t "$session_name":0
+  tmux select-layout -t "$session_name":0 'main-vertical'
 fi
 
-tmux attach -t $session_name
+tmux attach -t "$session_name"
