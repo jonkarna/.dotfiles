@@ -17,6 +17,7 @@
   branchname = !git branch | grep '^* ' | awk '{ print $2 }'
   unstage = reset HEAD
   unstash = stash pop
+  colist = "!select choice in $(git branch | grep -v '*'); do echo checking out $choice; git checkout $choice; break; done"
 [core]
   editor = vim
   excludesfile = ~/.gitignore
