@@ -5,7 +5,7 @@ export ZSH=$HOME/.dotfiles/zsh
 for config_file ($ZSH/*) source $config_file
 
 # load rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # use .zshrc.local for settings specific to one system
 [[ -f ~/.zshrc.local ]] && . ~/.zshrc.local
