@@ -27,6 +27,7 @@ alias mysql-cleanse='mysql -uroot -e "show databases" | grep -v Database | grep 
 alias mongo-cleanse='echo "show dbs" | mongo | grep stat_ngin_ | awk '"'"'{print $1}'"'"' | xargs -n1 mongo --eval "db.dropDatabase()"'
 alias flushmc="echo \"flush_all\" | nc localhost 11211"
 alias long_tail='tail -f -n 1000'
+alias publicip='dig +short myip.opendns.com @resolver1.opendns.com'
 
 # tmux
 alias t='tmux'
