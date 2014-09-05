@@ -11,6 +11,15 @@ task :install do
   end
 end
 
+namespace :dota do
+
+  task :link_config do
+    system %Q{rm -rf "$DOTA_PATH/autoexec.cfg"}
+    puts "linking dotfiles/dota.cfg to path/to/dota/autoexec.cfg"
+    system %Q{ln -s "$PWD/dota.cfg" "$DOTA_PATH/autoexec.cfg"}
+  end
+
+end
 
 namespace :vundle do
 
