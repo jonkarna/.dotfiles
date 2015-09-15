@@ -18,6 +18,8 @@
   unstage = reset HEAD
   unstash = stash pop
   colist = "!select choice in $(git branch | grep -v '*'); do echo checking out $choice; git checkout $choice; break; done"
+  rmlist = "!select choice in $(git branch | grep -v '*'); do echo removing $choice; git branch -D $choice; break; done"
+  remove-gone = !git-remove-gone-branches
 [core]
   editor = vim
   excludesfile = ~/.gitignore
