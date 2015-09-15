@@ -1,4 +1,4 @@
 setlocal spell
-setlocal wrap
+setlocal nowrap
 setlocal linebreak
 setlocal nolist
