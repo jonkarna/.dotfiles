@@ -20,4 +20,4 @@ def hide_log
   change_log(nil)
 end
 
-change_log(STDOUT)
+# change_log(STDOUT)
