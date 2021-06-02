@@ -17,6 +17,8 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
 Plugin 'vim-scripts/trailing-whitespace'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'leafgarland/typescript-vim'
+" Plugin 'w0rp/ale'
 
 " colorshemes
 Plugin 'tpope/vim-vividchalk'

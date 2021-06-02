@@ -69,3 +69,7 @@
   insteadOf = heroku:
 [url "ssh://git@bitbucket.org/"]
   insteadOf = wbb:
+[credential]
+  helper = osxkeychain
+[commit]
+  template = ~/.gitmessage

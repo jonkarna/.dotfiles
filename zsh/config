@@ -10,7 +10,6 @@ export PATH="$HOME/.dotfiles/git-diff-grep:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
 export CLICOLOR=true
 export EDITOR=vim
