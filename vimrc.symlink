@@ -4,11 +4,11 @@ let mapleader = " "
 filetype off
 
 " Declare bundles are handled via Vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " Let Vundle manage Vundle
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " github repos
 Plugin 'tpope/vim-endwise'
@@ -18,13 +18,10 @@ Plugin 'tpope/vim-bundler'
 Plugin 'vim-scripts/trailing-whitespace'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'leafgarland/typescript-vim'
-" Plugin 'w0rp/ale'
+Plugin 'petRUShka/vim-sage'
 
-" colorshemes
-Plugin 'tpope/vim-vividchalk'
-Plugin 'twerth/ir_black'
-Plugin 'nanotech/jellybeans.vim'
-
+" All of your Plugins must be added before the following line
+call vundle#end()  
 filetype plugin indent on
 
 set clipboard=unnamed
@@ -73,7 +70,7 @@ nnoremap <C-l> <C-W><C-l>
 nnoremap <C-h> <C-W><C-h>
 
 syntax on
-colorscheme ir_black
+colorscheme jellybeans
 
 let g:html_indent_tags = 'li\|p'
 
