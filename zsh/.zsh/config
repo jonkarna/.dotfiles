@@ -1,0 +1,13 @@
+export LSCOLORS="Gxfxcxdxbxegedabagacad"
+export CLICOLOR=true
+export EDITOR=vim
+
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/bin:$HOME/.dotfiles/bin:$PATH"
+export PATH="/usr/local/opt/openjdk@17/bin:$PATH"
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export PATH="$PATH:$HOME/.dotnet/tools"
+export JAVA_HOME='/usr/libexec/java_home -v 17'
+
+# use .zshrc.local for settings specific to one system
+[[ -f ~/.zshrc.local ]] && . ~/.zshrc.local

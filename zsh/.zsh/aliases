@@ -1,0 +1,9 @@
+# tmux
+alias t='tmux'
+alias ta='tmux attach -t'
+alias tk='tmux kill-session -t'
+alias tk-all='tmux kill-server'
+alias tn='tmux new -s'
+
+# terraform
+alias tf='terraform'
