@@ -44,6 +44,7 @@
   untracked = blue bold
 [push]
   default = current
+	autoSetupRemote = true
 [diff]
   tool = opendiff
 [merge]
@@ -69,7 +70,7 @@
   insteadOf = heroku:
 [url "ssh://git@bitbucket.org/"]
   insteadOf = wbb:
-[credential]
-  helper = osxkeychain
 [commit]
   template = ~/.gitmessage
+[pull]
+  ff = only
