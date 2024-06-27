@@ -8,9 +8,9 @@ session_name=`basename $PWD`
 tmux start-server
 
 if ! $(tmux has-session -t "$session_name"); then
-  tmux set-option -t "$session_name" default-path $PWD
+  tmux set-option -t "$session_name" -g default-path $PWD
   tmux new-session -d -s "$session_name" -n 'editor'
-  tmux send-keys -t "$session_name":0 'vim' C-m
+  tmux send-keys -t "$session_name":0 'nvim' C-m
   tmux splitw -t "$session_name":0
   tmux select-layout -t "$session_name":0 'main-vertical'
 fi
