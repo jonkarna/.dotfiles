@@ -2,18 +2,7 @@
   name = Jon Karna
   email = ipg49vv2@gmail.com
 [alias]
-  a = add
-  aa = add .
-  br = branch
-  brs = branch --all
-  c = commit
   cf = !git status --short --branch | grep UU
-  cm = commit -m
-  co = checkout
-  d = diff
-  lg = log --abbrev-commit --date=relative
-  rhh = reset --hard HEAD
-  st = status --short --branch
   branchname = !git branch | grep '^* ' | awk '{ print $2 }'
   unstage = reset HEAD
   unstash = stash pop
@@ -22,29 +11,12 @@
   remove-gone = !git-remove-gone-branches
 [core]
   editor = vim
-  excludesfile = ~/.gitignore
   quotepath = false
   autocrlf = input
   whitespace = space-before-tab, trailing-space
-[color]
-  ui = true
-[color "diff"]
-  meta = blue bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
-[color "branch"]
-  current = yellow reverse
-  local = yellow bold
-  remote = green bold
-  plain = red bold
-[color "status"]
-  added = yellow
-  changed = green bold
-  untracked = blue bold
 [push]
   default = current
-	autoSetupRemote = true
+  autoSetupRemote = true
 [diff]
   tool = opendiff
 [merge]
@@ -57,20 +29,11 @@
   enabled = true
 [github]
   user = jonkarna
-[url "git://github.com/"]
-  insteadOf = gh:
-[url "git@github.com:"]
-  insteadOf = wgh:
-[url "git@gist.github.com:"]
-  pushInsteadOf = gist:
-  pushInsteadOf = git://gist.github.com/
-[url "git://gist.github.com/"]
-  insteadOf = gist:
-[url "git@heroku.com:"]
-  insteadOf = heroku:
-[url "ssh://git@bitbucket.org/"]
-  insteadOf = wbb:
-[commit]
-  template = ~/.gitmessage
 [pull]
   ff = only
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/local/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/local/bin/gh auth git-credential
