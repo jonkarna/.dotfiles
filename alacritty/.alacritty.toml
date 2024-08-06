@@ -1,0 +1,9 @@
+live_config_reload = true
+
+[window]
+decorations = "None"
+opacity = 1.0
+
+[font]
+normal = { family = "0xProto Nerd Font Mono", style = "Regular" }
+size = 14.0
