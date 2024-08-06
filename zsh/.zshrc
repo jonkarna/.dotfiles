@@ -120,6 +120,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # shortcut to this dotfiles path is $ZSH
 
+source ~/.zsh/functions
 source ~/.zsh/aliases
 source ~/.zsh/config
 

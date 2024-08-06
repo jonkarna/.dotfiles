@@ -1,12 +1,26 @@
 # tmux
-alias t='tmux'
+# alias t='tmux'
 alias ta='tmux attach -t'
 alias tk='tmux kill-session -t'
 alias tk-all='tmux kill-server'
 alias tn='tmux new -s'
+
+bindkey -s ^f "tmux-sessionizer\n"
 
 # terraform
 alias tf='terraform'
 
 # lazygit
 alias lg=lazygit
+
+# ls
+alias ls=eza
+alias ll='eza --long'
+alias tree='eza --tree'
+
+# cd
+alias cd=z
+
+# tmux-which-key
+zle -N tmux-which-key
+bindkey -M vicmd " " tmux-which-key
